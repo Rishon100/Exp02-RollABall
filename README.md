@@ -73,7 +73,10 @@ public class roll : MonoBehaviour
 }
 ```
 ## OUTPUT :
+
 ![alt text](<Screenshot 2025-04-22 113424.png>)
+
 ![alt text](<Screenshot 2025-04-22 114652.png>)
+
 ## RESULT :
 Thus the experiment was successful. The ball moved as expected using Rigidbody physics and force-based movement.
