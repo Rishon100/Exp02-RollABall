@@ -28,8 +28,52 @@ Play the Game – Control the ball using Arrow Keys or WASD.
 Stop
 
 ## PROGRAM :
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+public class roll : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public float xforce = 5.0f, yforce = 200.0f, zforce = 5.0f;
+    void Start()
+    {
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float x = 0.0f, y = 0.0f, z = 0.0f;
+        if (Input.GetKey(KeyCode.A))
+        {
+            x = x - xforce;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            x = x + xforce;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            z = z + zforce;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            z = z - zforce;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            y = yforce;
+        }
+        GetComponent<Rigidbody>().AddForce(x, y, z);
+
+    }
+}
+```
 ## OUTPUT :
-
+![alt text](<Screenshot 2025-04-22 113424.png>)
+![alt text](<Screenshot 2025-04-22 114652.png>)
 ## RESULT :
 Thus the experiment was successful. The ball moved as expected using Rigidbody physics and force-based movement.
